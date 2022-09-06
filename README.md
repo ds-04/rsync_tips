@@ -3,17 +3,21 @@ A reference of rsync commands.
 
 <h1>Rsync Commands and hints</h1>
 
-<b>NOTE: commands here are in dry-run to avoid changes.</b>
-<br>
-<br>
-#transfer and ensure receiver matches source, with use of <i>--delete-after</i><br>
+<b>NOTE:</b>
+- commands here are in dry-run to avoid changes. 
+- note trailing slash after ``SOURCE`` and ``DEST`` vars
+- you may require ``-e "ssh -i /path/to/key"`` and ``user@${BACKUP_SERVER}:/${DEST}/``...
+- ...it is assumed below that storage is mounted.
+
+
+<b>#transfer and ensure receiver matches source, with use of <i>--delete-after</i></b><br>
 ``rsync -avn --delete-after ${SOURCE}/ ${DEST}/ > /tmp/rsync_transfer_${DATE_OF_RUN} 2>&1;``<br>
 <br>
 <br>
-#check if anything is left to do using <i>--stats</i> to log<br>
+<b>#check if anything is left to do using <i>--stats</i> to log</b><br>
 ``rsync -avn --stats ${SOURCE}/ ${DEST}/ > /tmp/rsync_check_stats_${DATE_OF_RUN} 2>&1;``<br>
 <br>
-#alternative checking methods, <i>-i, itemize-changes; -r, recursive</i>... skip creating files on receiver or skip updating files on receiver<br>
+<b>#alternative checking methods, <i>-i, itemize-changes; -r, recursive</i>... skip creating files on receiver or skip updating files on receiver</b><br>
 ``rsync -rin (--existing|--ignore-existing) ${SOURCE}/ ${DEST}/ > /tmp/rsync_check_itemize_${DATE_OF_RUN} 2>&1;``<br>
 
 
