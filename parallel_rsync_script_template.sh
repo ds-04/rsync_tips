@@ -11,9 +11,10 @@ fi
 DATE_OF_RUN=`date +%F_%H_%M`
 
 # base path for destination/backup
+#------Change this------ 
 BACKUP_PATH="/backup/destination/on/remote/"    #note includes trailing slash here
 
-#INPUT TO SCRIPT
+#INPUT TO SCRIPT - supplied by the other launcher script
 #local full path to a dir
 DLINE=$1
 BACKUP_SERVER_IP=$2
