@@ -4,8 +4,9 @@
 #export the path to a dir containing file list if necessary, here it is needed to see parallel_rsync_script.sh
 #export PATH=/rsync:${PATH}
 
+#list contents should be dirs not files, meaning rsync launched per dir entry NOT file
 #------Change this------ 
-INPUT_FILE=/rsync/list_of_dirs_to_copy
+INPUT_FILE=/rsync/list_of_dirs_to_copy 
 
 #------Change this------ activate if you want to check the host you are running from
 #check where this script is running from
