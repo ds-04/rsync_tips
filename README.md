@@ -1,6 +1,8 @@
 # rsync_tips
 A reference of rsync commands.
 
+<h1>Rsync Commands and hints</h1>
+
 <b>NOTE: commands here are in dry-run to avoid changes.</b>
 <br>
 <br>
@@ -13,3 +15,8 @@ A reference of rsync commands.
 <br>
 #alternative checking methods, <i>-i, itemize-changes; -r, recursive</i>... skip creating files on receiver or skip updating files on receiver<br>
 ``rsync -rin (--existing|--ignore-existing) ${SOURCE}/ ${DEST}/ > /tmp/rsync_check_itemize_${DATE_OF_RUN} 2>&1;``<br>
+
+
+<h1>Parallel rsync templates</h1>
+
+Templates are found within, adapt as needed.
