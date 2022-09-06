@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #------Change this------ 
-#export the path to a dir containing file list if necessary
+#export the path to a dir containing file list if necessary, here it is needed to see parallel_rsync_script.sh
 #export PATH=/rsync:${PATH}
 
 #------Change this------ 
