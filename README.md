@@ -6,6 +6,7 @@ A reference of rsync commands.
 <b>NOTE:</b>
 - commands here are in dry-run to avoid changes. 
 - note trailing slash after ``SOURCE`` and ``DEST`` vars
+- example date var ``DATE_OF_RUN=date +%F_%H_%M``
 - you may require ``-e "ssh -i /path/to/key"`` and ``user@${BACKUP_SERVER}:/${DEST}/``...
 - ...it is assumed below that storage is mounted.
 
