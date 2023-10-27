@@ -27,3 +27,10 @@ A reference of rsync commands.
 Templates are found within, adapt as needed.
 
 The templates are relevant to a scenario where a number of directories in a top level directory need transferred to a remote host/folder. As such the input listing should ideally be directories not files, to avoid an rsync process per file.
+
+
+<h1>Count files using dry mode</h1>
+
+By using --stats and dry mode the files at a location can be counted.
+
+``rsync -na --stats <PATH>``
