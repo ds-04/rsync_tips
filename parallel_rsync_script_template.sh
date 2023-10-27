@@ -19,7 +19,8 @@ BACKUP_PATH="/backup/destination/on/remote/"    #note includes trailing slash he
 DLINE=$1
 BACKUP_SERVER_IP=$2
 
-#Get the dir line so it can be logged
-DIR_LOG_LINE=`/usr/bin/echo ${DLINE}`  #in this form, it does nothing, could be changed to extract something of interest via a pipe
+#Get the dir line basename so it can be logged
+DIR_LOG_LINE=`/usr/bin/basename ${DLINE}`
 
-/usr/bin/rsync -e "ssh -i /path/to/key" -avz --acls --exclude=".exclude_something_example" --delete-after ${DLINE} user@${BACKUP_SERVER_IP}:/${BACKUP_PATH} > /dev/null 2>"/var/log/rsync/rsync_log_${DIR_LOG_LINE}_${DATE_OF_RUN}.txt"
+# REMOVE -n dry mode to activate copying
+/usr/bin/rsync -e "ssh -i /path/to/key" -nav --acls --exclude=".exclude_something_example" --delete-after ${DLINE} user@${BACKUP_SERVER_IP}:/${BACKUP_PATH} > /dev/null 2>"/var/log/rsync/rsync_log_${DIR_LOG_LINE}_${DATE_OF_RUN}.txt"
