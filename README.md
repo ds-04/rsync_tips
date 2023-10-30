@@ -63,8 +63,12 @@ for example:<br>
 <br>``-L max levels``
 
 
+<h1>Sync directory structure</h1>
 
+Copy directories from an input list, ensure permissions, not recursive, just items from the input list.
 
+``rsync -v -lptgo --acls -f"+ */" -f"- *" --files-from=/root/prsync/input_list_with_basename_dirs_listed /source_no_trailing_slash /destination_dir/``
 
+The above command uses -lptgo which is similar to --archive (-a) , but omits recursion (-r) and devices (-D).
 
 
