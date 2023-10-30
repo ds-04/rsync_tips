@@ -50,10 +50,12 @@ Templates are found within this repository, adapt as needed.
 The templates are relevant to a scenario where a number of directories in a top level directory need transferred to a remote host/folder. As such the input listing should ideally be directories not files, to avoid an rsync process per file.
 <br>
 <br>
-You may find the ``tree`` or ``ls -1`` command helpful to generate the input list.
+<h1>Generating input lists</h1>
+
+You may find the ``tree`` or ``ls -1`` command helpful to generate the input list(s).
 <br>
 <br>
-for example:<br>
+tree example:<br>
 <br>
 ``tree --noreport -fixL 3``
 <br>
