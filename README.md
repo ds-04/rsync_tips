@@ -55,7 +55,7 @@ The templates are relevant to a scenario where a number of directories in a top 
 You may find the ``tree`` or ``ls -1`` command helpful to generate the input list(s).
 <br>
 <br>
-tree example:<br>
+tree examples:<br>
 <br>
 ``tree --noreport -fixL 3``
 <br>
@@ -63,7 +63,14 @@ tree example:<br>
 <br>``-i no indentation lines``
 <br>``-x stay on filesystem``
 <br>``-L max levels``
-
+<br>
+<br>
+``tree -dfi --noreport > /tmp/file_list``
+<br>
+<br>``-d directories only``
+<br>``-f full path``
+<br>``-i no indentation lines``
+<br>
 
 <h1>Sync directory structure</h1>
 
