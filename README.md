@@ -82,4 +82,11 @@ The above command uses -lptgo which is similar to --archive (-a) , but omits rec
 
 The source (above "/source_dir_no_trailing_slash") is essentially the directory prefix to the input list (above "input_list_with_basename_dirs_listed").
 
+<h2>Obtaining basename listing for root of dir structure</h2>
+
+Feed using -n1 one result at a time
+
+``find /my_local_mount/ -maxdepth 1 -iname "*" -type d -print0 | xargs -0 -n1 -- basename`` > /tmp/some_dir_top_level_list
+
+
 
