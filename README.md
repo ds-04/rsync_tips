@@ -86,7 +86,7 @@ The source (above "/source_dir_no_trailing_slash") is essentially the directory 
 
 Feed using -n1 one result at a time
 
-``find /my_local_mount/ -maxdepth 1 -iname "*" -type d -print0 | xargs -0 -n1 -- basename`` > /tmp/some_dir_top_level_list
+``find /my_local_mount/ -maxdepth 1 -iname "*" -type d -print0 | xargs -0 -n1 -- basename > /tmp/some_dir_top_level_list``
 
 
 
