@@ -84,9 +84,11 @@ The source (above "/source_dir_no_trailing_slash") is essentially the directory 
 
 <h2>Obtaining basename listing for root of dir structure</h2>
 
-Feed using -n1 one result at a time
+Here <i>-mindepth 1</i> excludes the target directory of the find from results.
 
-``find /my_local_mount/ -maxdepth 1 -iname "*" -type d -print0 | xargs -0 -n1 -- basename > /tmp/some_dir_top_level_list``
+Feed using <i>-n1</i> one result at a time
+
+``find /my_local_mount/ -mindepth 1 -maxdepth 1 -iname "*" -type d -print0 | xargs -0 -n1 -- basename > /tmp/some_dir_top_level_list``
 
 
 
