@@ -43,6 +43,13 @@ A reference of rsync commands.
 ``rsync -na --stats <PATH>``
 <br>
 <br>
+
+<h1>Generic rsync template</h1>
+
+A generic rsync template is included which can be adapted.
+
+This will work with multiple input directories.
+
 <h1>Parallel rsync templates</h1>
 
 Templates are found within this repository, adapt as needed.
