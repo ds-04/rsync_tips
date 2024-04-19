@@ -37,6 +37,9 @@ A reference of rsync commands.
 ``rsync -rin (--existing|--ignore-existing) ${SOURCE}/ ${DEST}/ > /tmp/rsync_check_itemize_${DATE_OF_RUN} 2>&1;``<br>
 <br>
 <br>
+with -i (itemize) ``--out-format='%n'`` may be useful, which will print only the changed files.
+<br>
+Mbr>
 <h2>Count files using dry mode</h2>
 
 <b>#By using --stats and dry mode the files at a location can be counted.</b><br>
