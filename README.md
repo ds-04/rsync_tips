@@ -101,4 +101,9 @@ Feed using <i>-n1</i> one result at a time
 ``find /my_local_mount/ -mindepth 1 -maxdepth 1 -iname "*" -type d -print0 | xargs -0 -n1 -- basename > /tmp/some_dir_top_level_list``
 
 
+<h1>Quick one-liner</h1>
+
+```parallel -j 4 rsync -a --acls {} /DEST/DIR/ ::: /SOURCE/DIR/*```
+
+
 
